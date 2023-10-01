@@ -8,25 +8,11 @@ variable "artifact_bucket_name" {
   description = "The S3 Bucket name of artifacts."
 }
 
-variable "source_object_key" {
+variable "s3_source_object_key" {
   type        = string
   description = "程式碼來源物件位置"
 }
 
-variable "github_oauth_token" {
-  type        = string
-  description = "The OAuth Token of GitHub."
-}
-
-variable "repository_owner" {
-  type        = string
-  description = "The owner of the repository."
-}
-
-variable "repository_name" {
-  type        = string
-  description = "The name of the repository."
-}
 
 variable "cluster_name" {
   type        = string
@@ -44,17 +30,6 @@ variable "encryption_key_id" {
   description = "The KMS key ARN or ID."
 }
 
-variable "branch" {
-  default     = "master"
-  type        = string
-  description = "The name of the branch."
-}
-
-variable "poll_for_source_changes" {
-  default     = false
-  type        = string
-  description = "Specify true to indicate that periodic checks enabled."
-}
 
 variable "file_name" {
   default     = "imagedefinitions.json"
