@@ -62,8 +62,8 @@ resource "aws_codepipeline" "default" {
     action {
       name             = "Source"
       category         = "Source"
-      owner            = "ThirdParty"
-      provider         = "GitHub"
+      owner            = "AWS"
+      provider         = "S3"
       version          = 1
       run_order        = 1
       output_artifacts = ["Source"]
