@@ -8,9 +8,17 @@ resource "aws_s3_bucket" "default" {
   bucket = var.artifact_bucket_name
 }
 
-resource "aws_s3_bucket_acl" "example" {
+resource "aws_s3_bucket_ownership_controls" "default" {
   bucket = aws_s3_bucket.default.id
-  acl    = "private"
+  rule {
+    object_ownership = "BucketOwnerPreferred"
+  }
+}
+
+resource "aws_s3_bucket_acl" "default" {
+  depends_on = [aws_s3_bucket_ownership_controls.default]
+  bucket     = aws_s3_bucket.default.id
+  acl        = "private"
 }
 
 resource "aws_s3_bucket_versioning" "s3_default_version" {
