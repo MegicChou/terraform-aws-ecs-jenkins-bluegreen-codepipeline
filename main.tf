@@ -77,8 +77,9 @@ resource "aws_codepipeline" "default" {
       output_artifacts = ["Source"]
 
       configuration = {
-        S3Bucket    = aws_s3_bucket.default.bucket
-        S3ObjectKey = var.s3_source_object_key
+        S3Bucket             = aws_s3_bucket.default.bucket
+        S3ObjectKey          = var.s3_source_object_key
+        PollForSourceChanges = var.source_change_trigger
       }
     }
   }

@@ -111,3 +111,9 @@ variable "code_build_envs" {
   }))
   default = []
 }
+
+variable "source_change_trigger" {
+  type        = bool
+  default     = true
+  description = "檔案變更後執行 codepipeline"
+}

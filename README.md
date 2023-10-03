@@ -49,21 +49,6 @@ No modules.
 | <a name="input_alb_target_group_blue_name"></a> [alb\_target\_group\_blue\_name](#input\_alb\_target\_group\_blue\_name) | AWS ALB Target Group Name | `string` | n/a | yes |
 | <a name="input_alb_target_group_green_name"></a> [alb\_target\_group\_green\_name](#input\_alb\_target\_group\_green\_name) | AWS ALB Target Group Name | `string` | n/a | yes |
 | <a name="input_artifact_bucket_name"></a> [artifact\_bucket\_name](#input\_artifact\_bucket\_name) | The S3 Bucket name of artifacts. | `string` | n/a | yes |
-| <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | The name of the ECS Cluster. | `string` | n/a | yes |
-| <a name="input_code_build_envs"></a> [code\_build\_envs](#input\_code\_build\_envs) | https://www.terraform.io/docs/language/values/variables.html | <pre>list(object({<br>    name : string,<br>    value : string<br>  }))</pre> | `[]` | no |
-| <a name="input_description"></a> [description](#input\_description) | The description of the all resources. | `string` | `"Managed by Terraform"` | no |
-| <a name="input_encryption_key_id"></a> [encryption\_key\_id](#input\_encryption\_key\_id) | The KMS key ARN or ID. | `string` | `""` | no |
-| <a name="input_file_name"></a> [file\_name](#input\_file\_name) | The file name of the image definitions. | `string` | `"imagedefinitions.json"` | no |
-| <a name="input_filter_json_path"></a> [filter\_json\_path](#input\_filter\_json\_path) | The JSON path to filter on. | `string` | `"$.ref"` | no |
-| <a name="input_filter_match_equals"></a> [filter\_match\_equals](#input\_filter\_match\_equals) | The value to match on (e.g. refs/heads/{Branch}). | `string` | `"refs/heads/{Branch}"` | no |
-| <a name="input_iam_path"></a> [iam\_path](#input\_iam\_path) | Path in which to create the IAM Role and the IAM Policy. | `string` | `"/"` | no |
-| <a name="input_name"></a> [name](#input\_name) | The name of the pipeline | `string` | n/a | yes |
-| <a name="input_s3_source_object_key"></a> [s3\_source\_object\_key](#input\_s3\_source\_object\_key) | 程式碼來源物件位置 | `string` | n/a | yes |
-| <a name="input_secret_token"></a> [secret\_token](#input\_secret\_token) | The secret token for the GitHub webhook. | `string` | `""` | no |
-| <a name="input_service_name"></a> [service\_name](#input\_service\_name) | The name of the ECS Service. | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to all resources. | `map(string)` | `{}` | no |
-| <a name="input_webhook_events"></a> [webhook\_events](#input\_webhook\_events) | A list of events which should trigger the webhook. | `list(string)` | <pre>[<br>  "push"<br>]</pre> | no |
-
 ## Outputs
 
 | Name | Description |
