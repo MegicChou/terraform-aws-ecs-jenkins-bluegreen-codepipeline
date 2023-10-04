@@ -117,3 +117,9 @@ variable "source_change_trigger" {
   default     = true
   description = "檔案變更後執行 codepipeline"
 }
+
+variable "s3_version_control" {
+  type        = string
+  default     = "Disabled"
+  description = "Versioning state of the bucket. Valid values: Enabled, Suspended, or Disabled. Disabled"
+}

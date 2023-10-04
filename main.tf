@@ -24,7 +24,7 @@ resource "aws_s3_bucket_acl" "default" {
 resource "aws_s3_bucket_versioning" "s3_default_version" {
   bucket = aws_s3_bucket.default.id
   versioning_configuration {
-    status = "Enabled"
+    status = var.s3_version_control
   }
 }
 
