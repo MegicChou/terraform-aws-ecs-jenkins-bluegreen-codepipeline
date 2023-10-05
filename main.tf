@@ -35,8 +35,15 @@ resource "aws_s3_bucket_lifecycle_configuration" "s3_lifecycle" {
     id     = "version-destroy"
     status = "Enabled"
 
+    # 物件建立後幾天刪除
     expiration {
       days = 30
+    }
+
+    # 永久刪除非目前版本的物件
+    noncurrent_version_expiration {
+      # 物件成為非目前版本後的天數
+      noncurrent_days = 7
     }
   }
 }
