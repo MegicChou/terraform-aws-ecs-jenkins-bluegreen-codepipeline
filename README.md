@@ -32,6 +32,7 @@ No modules.
 | [aws_iam_role_policy_attachment.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_s3_bucket.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
 | [aws_s3_bucket_acl.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl) | resource |
+| [aws_s3_bucket_lifecycle_configuration.s3_lifecycle](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_lifecycle_configuration) | resource |
 | [aws_s3_bucket_ownership_controls.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_ownership_controls) | resource |
 | [aws_s3_bucket_versioning.s3_default_version](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning) | resource |
 | [random_id.secret_token](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id) | resource |
@@ -44,8 +45,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_alb_listen_arn"></a> [alb\_listen\_arn](#input\_alb\_listen\_arn) | AWS alb listen ARN | `string` | n/a | yes |
-| <a name="input_alb_listen_testing_arn"></a> [alb\_listen\_testing\_arn](#input\_alb\_listen\_testing\_arn) | AWS alb listen testing ARN | `string` | n/a | yes |
+| <a name="input_alb_listen_arns"></a> [alb\_listen\_arns](#input\_alb\_listen\_arns) | AWS alb listen ARN | `list(string)` | n/a | yes |
+| <a name="input_alb_listen_testing_arns"></a> [alb\_listen\_testing\_arns](#input\_alb\_listen\_testing\_arns) | AWS alb listen testing ARN | `list(string)` | n/a | yes |
 | <a name="input_alb_target_group_blue_name"></a> [alb\_target\_group\_blue\_name](#input\_alb\_target\_group\_blue\_name) | AWS ALB Target Group Name | `string` | n/a | yes |
 | <a name="input_alb_target_group_green_name"></a> [alb\_target\_group\_green\_name](#input\_alb\_target\_group\_green\_name) | AWS ALB Target Group Name | `string` | n/a | yes |
 | <a name="input_artifact_bucket_name"></a> [artifact\_bucket\_name](#input\_artifact\_bucket\_name) | The S3 Bucket name of artifacts. | `string` | n/a | yes |
