@@ -1,12 +1,12 @@
 
 resource "aws_codedeploy_app" "app_deploy" {
-  name             = "${var.cluster_name}-deploy"
+  name             = "${var.name}-deploy"
   compute_platform = "ECS"
 }
 
 // 部屬群組 iam 角色權限
 resource "aws_iam_role" "app_deploy_group_iam_role" {
-  name               = "${var.cluster_name}-deploy-group-role"
+  name               = "${var.name}-deploy-group-role"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",

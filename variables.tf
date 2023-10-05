@@ -120,6 +120,6 @@ variable "source_change_trigger" {
 
 variable "s3_version_control" {
   type        = string
-  default     = "Disabled"
+  default     = "Enabled"
   description = "Versioning state of the bucket. Valid values: Enabled, Suspended, or Disabled. Disabled"
 }
