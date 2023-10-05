@@ -79,13 +79,13 @@ variable "tags" {
   description = "A mapping of tags to assign to all resources."
 }
 
-variable "alb_listen_arn" {
-  type        = string
+variable "alb_listen_arns" {
+  type        = list(string)
   description = "AWS alb listen ARN"
 }
 
-variable "alb_listen_testing_arn" {
-  type        = string
+variable "alb_listen_testing_arns" {
+  type        = list(string)
   description = "AWS alb listen testing ARN"
 }
 
