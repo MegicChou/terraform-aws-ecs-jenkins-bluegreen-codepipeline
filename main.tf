@@ -37,7 +37,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "s3_lifecycle" {
 
     # 物件建立後幾天刪除
     expiration {
-      days = 30
+      days = 15
     }
 
     # 永久刪除非目前版本的物件
