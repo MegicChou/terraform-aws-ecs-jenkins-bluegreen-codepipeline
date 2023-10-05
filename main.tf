@@ -28,6 +28,19 @@ resource "aws_s3_bucket_versioning" "s3_default_version" {
   }
 }
 
+resource "aws_s3_bucket_lifecycle_configuration" "s3_lifecycle" {
+  bucket = aws_s3_bucket.default.bucket
+
+  rule {
+    id     = "version-destroy"
+    status = "Enabled"
+
+    expiration {
+      days = 30
+    }
+  }
+}
+
 
 resource "aws_codepipeline" "default" {
   name     = var.name
